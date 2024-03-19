@@ -1,5 +1,7 @@
 # Comandos importantes
 
+`Você precisa estar dentro da pasta sample para executar esses comandos!`
+
 Utilize os comandos abaixo sempre que for feita uma atualização no arquivo Arithmetic.g4
 
 ```
