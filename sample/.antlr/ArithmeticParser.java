@@ -1,4 +1,4 @@
-// Generated from c:/Users/amand/Desktop/antlr4/sample/Arithmetic.g4 by ANTLR 4.13.1
+// Generated from c:/Users/amand/Desktop/antlr-RA1/sample/Arithmetic.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -29,7 +29,7 @@ public class ArithmeticParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'*'", "'/'", "'+'", "'-'", "'|'", "'^'", "'('", "')'"
+			null, "'('", "')'", "'*'", "'/'", "'+'", "'-'", "'|'", "'^'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -118,7 +118,7 @@ public class ArithmeticParser extends Parser {
 			setState(9);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 9344L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 9218L) != 0)) {
 				{
 				{
 				setState(4);
@@ -191,14 +191,14 @@ public class ArithmeticParser extends Parser {
 				match(NEGATIVE);
 				}
 				break;
-			case T__6:
+			case T__0:
 				{
 				setState(15);
-				match(T__6);
+				match(T__0);
 				setState(19);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 9344L) != 0)) {
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 9218L) != 0)) {
 					{
 					{
 					setState(16);
@@ -210,7 +210,7 @@ public class ArithmeticParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(22);
-				match(T__7);
+				match(T__1);
 				}
 				break;
 			default:
@@ -233,12 +233,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(25);
-						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
 						setState(26);
 						expr(0);
 						setState(27);
 						_la = _input.LA(1);
-						if ( !(_la==T__0 || _la==T__1) ) {
+						if ( !(_la==T__2 || _la==T__3) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -253,12 +253,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(29);
-						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(30);
 						expr(0);
 						setState(31);
 						_la = _input.LA(1);
-						if ( !(_la==T__2 || _la==T__3) ) {
+						if ( !(_la==T__4 || _la==T__5) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -273,12 +273,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(33);
-						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(34);
 						expr(0);
 						setState(35);
 						_la = _input.LA(1);
-						if ( !(_la==T__4 || _la==T__5) ) {
+						if ( !(_la==T__6 || _la==T__7) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -318,11 +318,11 @@ public class ArithmeticParser extends Parser {
 	private boolean expr_sempred(ExprContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return precpred(_ctx, 4);
-		case 1:
 			return precpred(_ctx, 3);
-		case 2:
+		case 1:
 			return precpred(_ctx, 2);
+		case 2:
+			return precpred(_ctx, 1);
 		}
 		return true;
 	}
@@ -335,25 +335,25 @@ public class ArithmeticParser extends Parser {
 		"\u0018\b\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
 		"\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
 		"\u0001\u0001\u0005\u0001&\b\u0001\n\u0001\f\u0001)\t\u0001\u0001\u0001"+
-		"\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0003\u0001\u0000\u0001\u0002"+
-		"\u0001\u0000\u0003\u0004\u0001\u0000\u0005\u0006/\u0000\t\u0001\u0000"+
-		"\u0000\u0000\u0002\u0017\u0001\u0000\u0000\u0000\u0004\u0005\u0003\u0002"+
-		"\u0001\u0000\u0005\u0006\u0005\t\u0000\u0000\u0006\b\u0001\u0000\u0000"+
-		"\u0000\u0007\u0004\u0001\u0000\u0000\u0000\b\u000b\u0001\u0000\u0000\u0000"+
-		"\t\u0007\u0001\u0000\u0000\u0000\t\n\u0001\u0000\u0000\u0000\n\u0001\u0001"+
+		"\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0003\u0001\u0000\u0003\u0004"+
+		"\u0001\u0000\u0005\u0006\u0001\u0000\u0007\b/\u0000\t\u0001\u0000\u0000"+
+		"\u0000\u0002\u0017\u0001\u0000\u0000\u0000\u0004\u0005\u0003\u0002\u0001"+
+		"\u0000\u0005\u0006\u0005\t\u0000\u0000\u0006\b\u0001\u0000\u0000\u0000"+
+		"\u0007\u0004\u0001\u0000\u0000\u0000\b\u000b\u0001\u0000\u0000\u0000\t"+
+		"\u0007\u0001\u0000\u0000\u0000\t\n\u0001\u0000\u0000\u0000\n\u0001\u0001"+
 		"\u0000\u0000\u0000\u000b\t\u0001\u0000\u0000\u0000\f\r\u0006\u0001\uffff"+
 		"\uffff\u0000\r\u0018\u0005\n\u0000\u0000\u000e\u0018\u0005\r\u0000\u0000"+
-		"\u000f\u0013\u0005\u0007\u0000\u0000\u0010\u0012\u0003\u0002\u0001\u0000"+
+		"\u000f\u0013\u0005\u0001\u0000\u0000\u0010\u0012\u0003\u0002\u0001\u0000"+
 		"\u0011\u0010\u0001\u0000\u0000\u0000\u0012\u0015\u0001\u0000\u0000\u0000"+
 		"\u0013\u0011\u0001\u0000\u0000\u0000\u0013\u0014\u0001\u0000\u0000\u0000"+
 		"\u0014\u0016\u0001\u0000\u0000\u0000\u0015\u0013\u0001\u0000\u0000\u0000"+
-		"\u0016\u0018\u0005\b\u0000\u0000\u0017\f\u0001\u0000\u0000\u0000\u0017"+
+		"\u0016\u0018\u0005\u0002\u0000\u0000\u0017\f\u0001\u0000\u0000\u0000\u0017"+
 		"\u000e\u0001\u0000\u0000\u0000\u0017\u000f\u0001\u0000\u0000\u0000\u0018"+
-		"\'\u0001\u0000\u0000\u0000\u0019\u001a\n\u0004\u0000\u0000\u001a\u001b"+
+		"\'\u0001\u0000\u0000\u0000\u0019\u001a\n\u0003\u0000\u0000\u001a\u001b"+
 		"\u0003\u0002\u0001\u0000\u001b\u001c\u0007\u0000\u0000\u0000\u001c&\u0001"+
-		"\u0000\u0000\u0000\u001d\u001e\n\u0003\u0000\u0000\u001e\u001f\u0003\u0002"+
+		"\u0000\u0000\u0000\u001d\u001e\n\u0002\u0000\u0000\u001e\u001f\u0003\u0002"+
 		"\u0001\u0000\u001f \u0007\u0001\u0000\u0000 &\u0001\u0000\u0000\u0000"+
-		"!\"\n\u0002\u0000\u0000\"#\u0003\u0002\u0001\u0000#$\u0007\u0002\u0000"+
+		"!\"\n\u0001\u0000\u0000\"#\u0003\u0002\u0001\u0000#$\u0007\u0002\u0000"+
 		"\u0000$&\u0001\u0000\u0000\u0000%\u0019\u0001\u0000\u0000\u0000%\u001d"+
 		"\u0001\u0000\u0000\u0000%!\u0001\u0000\u0000\u0000&)\u0001\u0000\u0000"+
 		"\u0000\'%\u0001\u0000\u0000\u0000\'(\u0001\u0000\u0000\u0000(\u0003\u0001"+

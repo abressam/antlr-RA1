@@ -29,7 +29,7 @@ public class ArithmeticParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'*'", "'/'", "'+'", "'-'", "'|'", "'^'", "'('", "')'"
+			null, "'('", "')'", "'*'", "'/'", "'+'", "'-'", "'|'", "'^'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -125,7 +125,7 @@ public class ArithmeticParser extends Parser {
 			setState(9);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << NUMBER) | (1L << NEGATIVE))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << NUMBER) | (1L << NEGATIVE))) != 0)) {
 				{
 				{
 				setState(4);
@@ -205,14 +205,14 @@ public class ArithmeticParser extends Parser {
 				match(NEGATIVE);
 				}
 				break;
-			case T__6:
+			case T__0:
 				{
 				setState(15);
-				match(T__6);
+				match(T__0);
 				setState(19);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__6) | (1L << NUMBER) | (1L << NEGATIVE))) != 0)) {
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << NUMBER) | (1L << NEGATIVE))) != 0)) {
 					{
 					{
 					setState(16);
@@ -224,7 +224,7 @@ public class ArithmeticParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(22);
-				match(T__7);
+				match(T__1);
 				}
 				break;
 			default:
@@ -247,12 +247,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(25);
-						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
 						setState(26);
 						expr(0);
 						setState(27);
 						_la = _input.LA(1);
-						if ( !(_la==T__0 || _la==T__1) ) {
+						if ( !(_la==T__2 || _la==T__3) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -267,12 +267,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(29);
-						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						setState(30);
 						expr(0);
 						setState(31);
 						_la = _input.LA(1);
-						if ( !(_la==T__2 || _la==T__3) ) {
+						if ( !(_la==T__4 || _la==T__5) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -287,12 +287,12 @@ public class ArithmeticParser extends Parser {
 						_localctx = new ExprContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
 						setState(33);
-						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
 						setState(34);
 						expr(0);
 						setState(35);
 						_la = _input.LA(1);
-						if ( !(_la==T__4 || _la==T__5) ) {
+						if ( !(_la==T__6 || _la==T__7) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -332,11 +332,11 @@ public class ArithmeticParser extends Parser {
 	private boolean expr_sempred(ExprContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return precpred(_ctx, 4);
-		case 1:
 			return precpred(_ctx, 3);
-		case 2:
+		case 1:
 			return precpred(_ctx, 2);
+		case 2:
+			return precpred(_ctx, 1);
 		}
 		return true;
 	}
@@ -345,14 +345,14 @@ public class ArithmeticParser extends Parser {
 		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20-\4\2\t\2\4\3\t"+
 		"\3\3\2\3\2\3\2\7\2\n\n\2\f\2\16\2\r\13\2\3\3\3\3\3\3\3\3\3\3\7\3\24\n"+
 		"\3\f\3\16\3\27\13\3\3\3\5\3\32\n\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\3\3\3\3\7\3(\n\3\f\3\16\3+\13\3\3\3\2\3\4\4\2\4\2\5\3\2\3\4\3\2\5"+
-		"\6\3\2\7\b\2\61\2\13\3\2\2\2\4\31\3\2\2\2\6\7\5\4\3\2\7\b\7\13\2\2\b\n"+
+		"\3\3\3\3\3\3\7\3(\n\3\f\3\16\3+\13\3\3\3\2\3\4\4\2\4\2\5\3\2\5\6\3\2\7"+
+		"\b\3\2\t\n\2\61\2\13\3\2\2\2\4\31\3\2\2\2\6\7\5\4\3\2\7\b\7\13\2\2\b\n"+
 		"\3\2\2\2\t\6\3\2\2\2\n\r\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f\3\3\2\2\2"+
-		"\r\13\3\2\2\2\16\17\b\3\1\2\17\32\7\f\2\2\20\32\7\17\2\2\21\25\7\t\2\2"+
+		"\r\13\3\2\2\2\16\17\b\3\1\2\17\32\7\f\2\2\20\32\7\17\2\2\21\25\7\3\2\2"+
 		"\22\24\5\4\3\2\23\22\3\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\25\26\3\2\2\2"+
-		"\26\30\3\2\2\2\27\25\3\2\2\2\30\32\7\n\2\2\31\16\3\2\2\2\31\20\3\2\2\2"+
-		"\31\21\3\2\2\2\32)\3\2\2\2\33\34\f\6\2\2\34\35\5\4\3\2\35\36\t\2\2\2\36"+
-		"(\3\2\2\2\37 \f\5\2\2 !\5\4\3\2!\"\t\3\2\2\"(\3\2\2\2#$\f\4\2\2$%\5\4"+
+		"\26\30\3\2\2\2\27\25\3\2\2\2\30\32\7\4\2\2\31\16\3\2\2\2\31\20\3\2\2\2"+
+		"\31\21\3\2\2\2\32)\3\2\2\2\33\34\f\5\2\2\34\35\5\4\3\2\35\36\t\2\2\2\36"+
+		"(\3\2\2\2\37 \f\4\2\2 !\5\4\3\2!\"\t\3\2\2\"(\3\2\2\2#$\f\3\2\2$%\5\4"+
 		"\3\2%&\t\4\2\2&(\3\2\2\2\'\33\3\2\2\2\'\37\3\2\2\2\'#\3\2\2\2(+\3\2\2"+
 		"\2)\'\3\2\2\2)*\3\2\2\2*\5\3\2\2\2+)\3\2\2\2\7\13\25\31\')";
 	public static final ATN _ATN =

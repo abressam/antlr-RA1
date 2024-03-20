@@ -1,4 +1,4 @@
-// Generated from c:/Users/amand/Desktop/antlr4/sample/Arithmetic.g4 by ANTLR 4.13.1
+// Generated from c:/Users/amand/Desktop/antlr-RA1/sample/Arithmetic.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -36,7 +36,7 @@ public class ArithmeticLexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'*'", "'/'", "'+'", "'-'", "'|'", "'^'", "'('", "')'"
+			null, "'('", "')'", "'*'", "'/'", "'+'", "'-'", "'|'", "'^'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -132,12 +132,12 @@ public class ArithmeticLexer extends Lexer {
 		"\r)\u0001\u0000\u0000\u0000\u000f+\u0001\u0000\u0000\u0000\u0011.\u0001"+
 		"\u0000\u0000\u0000\u00134\u0001\u0000\u0000\u0000\u00157\u0001\u0000\u0000"+
 		"\u0000\u0017<\u0001\u0000\u0000\u0000\u0019F\u0001\u0000\u0000\u0000\u001b"+
-		"J\u0001\u0000\u0000\u0000\u001d\u001e\u0005*\u0000\u0000\u001e\u0002\u0001"+
-		"\u0000\u0000\u0000\u001f \u0005/\u0000\u0000 \u0004\u0001\u0000\u0000"+
-		"\u0000!\"\u0005+\u0000\u0000\"\u0006\u0001\u0000\u0000\u0000#$\u0005-"+
-		"\u0000\u0000$\b\u0001\u0000\u0000\u0000%&\u0005|\u0000\u0000&\n\u0001"+
-		"\u0000\u0000\u0000\'(\u0005^\u0000\u0000(\f\u0001\u0000\u0000\u0000)*"+
-		"\u0005(\u0000\u0000*\u000e\u0001\u0000\u0000\u0000+,\u0005)\u0000\u0000"+
+		"J\u0001\u0000\u0000\u0000\u001d\u001e\u0005(\u0000\u0000\u001e\u0002\u0001"+
+		"\u0000\u0000\u0000\u001f \u0005)\u0000\u0000 \u0004\u0001\u0000\u0000"+
+		"\u0000!\"\u0005*\u0000\u0000\"\u0006\u0001\u0000\u0000\u0000#$\u0005/"+
+		"\u0000\u0000$\b\u0001\u0000\u0000\u0000%&\u0005+\u0000\u0000&\n\u0001"+
+		"\u0000\u0000\u0000\'(\u0005-\u0000\u0000(\f\u0001\u0000\u0000\u0000)*"+
+		"\u0005|\u0000\u0000*\u000e\u0001\u0000\u0000\u0000+,\u0005^\u0000\u0000"+
 		",\u0010\u0001\u0000\u0000\u0000-/\u0007\u0000\u0000\u0000.-\u0001\u0000"+
 		"\u0000\u0000/0\u0001\u0000\u0000\u00000.\u0001\u0000\u0000\u000001\u0001"+
 		"\u0000\u0000\u00001\u0012\u0001\u0000\u0000\u000025\u0003\u0017\u000b"+
