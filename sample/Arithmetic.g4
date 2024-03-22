@@ -3,13 +3,13 @@
 grammar Arithmetic;
 
 prog: (expr NEWLINE)* ;
-expr: NUMBER
-    | NEGATIVE
-    | '(' expr* ')'
-    | expr expr ('*'|'/')
-    | expr expr ('+'|'-')
-    | expr expr ('|'|'^')
+expr: number
+    | '(' expr* ')' operator?
+    | number number operator
     ;
+
+operator: ('+' | '-' | '*' | '/' | '^' | '|' | '%') ;
+number: NUMBER | NEGATIVE ;
 
 NEWLINE : [\r\n]+ ;
 NUMBER  : FLOAT | INT ;
