@@ -28,11 +28,12 @@ expr: '(' operation ')'
 
 operation: expr expr operator ;
 operator: ('+' | '-' | '*' | '/' | '|' | '^' | '%') ;
-number: FLOAT | INT | ZERO ;
+number: FLOAT | INT | NEGATIVE_INT | ZERO ;
 integer: INT | ZERO ;
-nonzero: INT ;
+nonzero: INT | NEGATIVE_INT ;
 
-INT: [1-9] [0-9]* | '-' INT;
+INT: [1-9] [0-9]* ;
+NEGATIVE_INT: '-' INT ;
 ZERO: '0' ;
 FLOAT: [0-9]+ '.' [0-9]* | '-' FLOAT;
 MEM: 'MEM' ;

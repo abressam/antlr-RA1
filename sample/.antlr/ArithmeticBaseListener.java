@@ -1,4 +1,4 @@
-// Generated from Arithmetic.g4 by ANTLR 4.7.2
+// Generated from c:/Users/amand/Desktop/antlr-RA1/sample/Arithmetic.g4 by ANTLR 4.13.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
+@SuppressWarnings("CheckReturnValue")
 public class ArithmeticBaseListener implements ArithmeticListener {
 	/**
 	 * {@inheritDoc}
