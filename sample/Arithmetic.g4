@@ -9,28 +9,32 @@ expr: '(' operation ')'
     | '(' number number '-' ')'
     | '(' number number '*' ')'
     | '(' number number '|' ')'
-    | '(' INT INT '/' ')'
-    | '(' INT INT '%' ')'
-    | '(' number INT '^' ')'
+    | '(' integer nonzero '/' ')'
+    | '(' nonzero nonzero '/' ')'
+    | '(' integer integer '%' ')'
+    | '(' nonzero nonzero '%' ')'
+    | '(' number integer '^' ')'
     | '(' number MEM ')'
     | '(' number MEM expr operator')'
     | '(' MEM ')'
     | '(' expr MEM ')'
     | '(' MEM expr ')'
     | '(' MEM expr operator')'
-    | '(' INT RES ')'
-    | '(' INT RES expr')'
+    | '(' integer RES ')'
+    | '(' integer RES expr')'
     | '(' number expr operator ')'
     | '(' expr* ')'
     ;
 
 operation: expr expr operator ;
 operator: ('+' | '-' | '*' | '/' | '|' | '^' | '%') ;
-number: FLOAT | INT | NEGATIVE ;
+number: FLOAT | INT | ZERO ;
+integer: INT | ZERO ;
+nonzero: INT ;
 
-INT: [0-9]+ ;
-FLOAT: [0-9]+ '.' [0-9]* ;
-NEGATIVE: '-' (FLOAT | INT) ;
+INT: [1-9] [0-9]* | '-' INT;
+ZERO: '0' ;
+FLOAT: [0-9]+ '.' [0-9]* | '-' FLOAT;
 MEM: 'MEM' ;
 RES: 'RES' ;
 NEWLINE: [\r\n]+ ;
