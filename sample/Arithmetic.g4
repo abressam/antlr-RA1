@@ -42,7 +42,7 @@ nonZeroInt: INT | NEGATIVE_INT ;
 INT: [1-9] [0-9]* ;
 NEGATIVE_INT: '-' INT ;
 ZERO: '0' ;
-FLOAT: [0-9]+ '.' [0-9]* ;
+FLOAT: [0-9]+ '.' [0-9]+ ;
 NEGATIVE_FLOAT: '-' FLOAT ;
 MEM: 'MEM' ;
 RES: 'RES' ;
