@@ -75,6 +75,30 @@ public class ArithmeticBaseListener implements ArithmeticListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterRational(ArithmeticParser.RationalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRational(ArithmeticParser.RationalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNonZeroFloat(ArithmeticParser.NonZeroFloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNonZeroFloat(ArithmeticParser.NonZeroFloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterInteger(ArithmeticParser.IntegerContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -87,13 +111,13 @@ public class ArithmeticBaseListener implements ArithmeticListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNonzero(ArithmeticParser.NonzeroContext ctx) { }
+	@Override public void enterNonZeroInt(ArithmeticParser.NonZeroIntContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNonzero(ArithmeticParser.NonzeroContext ctx) { }
+	@Override public void exitNonZeroInt(ArithmeticParser.NonZeroIntContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

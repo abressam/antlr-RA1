@@ -57,6 +57,26 @@ public interface ArithmeticListener extends ParseTreeListener {
 	 */
 	void exitNumber(ArithmeticParser.NumberContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ArithmeticParser#rational}.
+	 * @param ctx the parse tree
+	 */
+	void enterRational(ArithmeticParser.RationalContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ArithmeticParser#rational}.
+	 * @param ctx the parse tree
+	 */
+	void exitRational(ArithmeticParser.RationalContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ArithmeticParser#nonZeroFloat}.
+	 * @param ctx the parse tree
+	 */
+	void enterNonZeroFloat(ArithmeticParser.NonZeroFloatContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ArithmeticParser#nonZeroFloat}.
+	 * @param ctx the parse tree
+	 */
+	void exitNonZeroFloat(ArithmeticParser.NonZeroFloatContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ArithmeticParser#integer}.
 	 * @param ctx the parse tree
 	 */
@@ -67,13 +87,13 @@ public interface ArithmeticListener extends ParseTreeListener {
 	 */
 	void exitInteger(ArithmeticParser.IntegerContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ArithmeticParser#nonzero}.
+	 * Enter a parse tree produced by {@link ArithmeticParser#nonZeroInt}.
 	 * @param ctx the parse tree
 	 */
-	void enterNonzero(ArithmeticParser.NonzeroContext ctx);
+	void enterNonZeroInt(ArithmeticParser.NonZeroIntContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ArithmeticParser#nonzero}.
+	 * Exit a parse tree produced by {@link ArithmeticParser#nonZeroInt}.
 	 * @param ctx the parse tree
 	 */
-	void exitNonzero(ArithmeticParser.NonzeroContext ctx);
+	void exitNonZeroInt(ArithmeticParser.NonZeroIntContext ctx);
 }
