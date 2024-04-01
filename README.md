@@ -38,4 +38,5 @@ Unlike the previous work, where we were supposed to program a "functional" calcu
 The work was developed in antlr4 and compiled using the Java language. The grammar was defined as follows:
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/841839ae-af1f-4bcc-9912-84bf6b1470f4)
+
 Figure 1. Grammar named "Arithmetic".
