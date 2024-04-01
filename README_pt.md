@@ -47,25 +47,25 @@ A gramática teve seu nome definido como “Arithmetic”. Logo no começo já d
 
 A seguir, definimos a regra “expr”, que representa uma expressão, a partir daí essa regra descreve todas as possíveis formas que uma expressão pode ter na linguagem, incluindo referências de memória, operações, etc, como demonstrado em:
 
-* '(' operation ')': quando temos uma operação entre dois números;
-* '(' number number '+' ')': operação de adição;
-* '(' number number '-' ')':  operação de subtração;
-* '(' number number '*' ')':  operação de multiplicação;
-* '(' integer nonZeroInt '|' ')', '(' rational nonZeroFloat '|' ')', '(' rational nonZeroInt '|' ')'' e (' integer nonZeroFloat '|' ')': definem as regras para operações de divisão entre números reais e previnem a divisão por zero;
-* '(' integer nonZeroInt '/' ')' e '(' nonZeroInt nonZeroInt '/' ')': definem as regras para operações de divisão de números inteiros e previnem a divisão por zero;
-* '(' integer integer '%' ')' e '(' nonZeroInt nonZeroInt '%' ')': definem as regras para operações de resto da divisão de números inteiros e previnem a divisão por zero;
-* '(' number integer '^' ')': operação de potenciação que previne expoente negativo;
-* '(' number MEM ')': quando um número é “salvo” na memória;
-'(' number MEM expr operator')': quando um número é “salvo” na memória e temos uma expressão e/ou operador logo a seguir;
-* '(' MEM ')': quando um número é “recuperado” do armazenamento na memória;
-* '(' expr MEM ')': quando uma expressão é “salva/armazenada” na memória;
-* '(' MEM expr ')': quando uma expressão está ao lado de uma “busca” do valor armazenado na memória;
-* '(' MEM expr operator')': quando uma expressão e/ou operação está ao lado de uma “busca” do valor armazenado na memória
-* '(' integer RES ')': quando buscamos o valor em número inteiro do resultado de uma linha;
-* '(' integer RES expr')' e '(' expr RES ')': quando buscamos o valor em número inteiro do resultado de uma linha, seguido por uma expressão ou com uma expressão anterior a ele;
-* '(' expr RES expr')': quando buscamos o valor em número inteiro do resultado de uma linha e ele pode ser antecedido e/ou precedido por expressões;
-* '(' number expr operator ')': podemos ter números seguidos de expressões e operadores;
-* '(' expr* ')': podemos ter zero ou mais expressões;
+* **'(' operation ')'**: quando temos uma operação entre dois números;
+* **'(' number number '+' ')'**: operação de adição;
+* **'(' number number '-' ')'**:  operação de subtração;
+* **'(' number number '*' ')'**:  operação de multiplicação;
+* **'(' integer nonZeroInt '|' ')'**, **'(' rational nonZeroFloat '|' ')'**, **'(' rational nonZeroInt '|' ')''** e **(' integer nonZeroFloat '|' ')'**: definem as regras para operações de divisão entre números reais e previnem a divisão por zero;
+* **'(' integer nonZeroInt '/' ')'** e **'(' nonZeroInt nonZeroInt '/' ')'**: definem as regras para operações de divisão de números inteiros e previnem a divisão por zero;
+* **'(' integer integer '%' ')'** e **'(' nonZeroInt nonZeroInt '%' ')'**: definem as regras para operações de resto da divisão de números inteiros e previnem a divisão por zero;
+* **'(' number integer '^' ')'**: operação de potenciação que previne expoente negativo;
+* **'(' number MEM ')'**: quando um número é “salvo” na memória;
+* **'(' number MEM expr operator')'**: quando um número é “salvo” na memória e temos uma expressão e/ou operador logo a seguir;
+* **'(' MEM ')'**: quando um número é “recuperado” do armazenamento na memória;
+* **'(' expr MEM ')'**: quando uma expressão é “salva/armazenada” na memória;
+* **'(' MEM expr ')'**: quando uma expressão está ao lado de uma “busca” do valor armazenado na memória;
+* **'(' MEM expr operator')'**: quando uma expressão e/ou operação está ao lado de uma “busca” do valor armazenado na memória
+* **'(' integer RES ')'**: quando buscamos o valor em número inteiro do resultado de uma linha;
+* **'(' integer RES expr')'** e **'(' expr RES ')'**: quando buscamos o valor em número inteiro do resultado de uma linha, seguido por uma expressão ou com uma expressão anterior a ele;
+* **'(' expr RES expr')'**: quando buscamos o valor em número inteiro do resultado de uma linha e ele pode ser antecedido e/ou precedido por expressões;
+* **'(' number expr operator ')'**: podemos ter números seguidos de expressões e operadores;
+* **'(' expr* ')'**: podemos ter zero ou mais expressões;
 
 Já para as regras relacionadas a operações e números:
 
@@ -242,9 +242,27 @@ Abaixo podemos ver outra parte da árvore sintática gerada, com um aviso, pois 
 
 📷 *Figura 19. Impressão na árvore da expressão incorreta.*
 
-Perceba aqui que, mesmo que tenhamos 6 linhas quando “chamamos” a expressão “(6 RES)”, não faria diferença o número que colocássemos, pois por enquanto, a gramática apenas avalia se essa expressão é aceita e não possui lógica ainda.
+Perceba aqui que, mesmo que tivéssemos 6 linhas quando “chamamos” a expressão “_(6 RES)_”, não faria diferença o número que colocássemos, pois por enquanto, a gramática apenas avalia se essa expressão é aceita e não possui lógica ainda.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/407c135f-a377-4531-baf0-4fc10b6e850c)
 
 📷 *Figura 20. Impressão da expressão “(6 RES)” na árvore sintática.*
+
+Aqui, temos a última expressão na árvore como sendo “(4.3 MEM (3 1 |) +)”, por mais que tenhamos outras expressões.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/86f887a4-32d7-403d-b25f-9befbd66e025)
+
+📷 *Figura 21. Impressão da expressão “(4.3 MEM (3 1 |) +)” na árvore sintática.*
+
+Devido ao modo pânico, ao encontrar a próxima expressão sendo “_/(1 2 +)_” a árvore simplesmente para de ser executada, mesmo que a última expressão do arquivo de teste “_(3 (4 5 -) ^)_” seja uma expressão correta.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/ef5d825b-60fa-48e4-a65d-ba3e6e881a57)
+
+📷 *Figura 22. Uma sequência de expressões incorretas que causam o modo pânico e finalizam a execução. Não sendo possível avaliar o que vem a seguir, inclusive a última linha, que é uma expressão correta.*
+
+# Conclusão
+
+Neste trabalho, exploramos o uso do ANTLR para criar analisadores léxicos e sintáticos para a linguagem da calculadora desenvolvida anteriormente. Ao analisar e compreender as regras da linguagem, pudemos construir gramáticas adequadas para identificar corretamente as expressões e comandos definidos. Através do ANTLR, conseguimos gerar árvores sintáticas que representam a estrutura das expressões e comandos, facilitando a compreensão e verificação da correção sintática do código. Este trabalho demonstrou a utilidade e eficácia do ANTLR na criação de analisadores para linguagens específicas, bem como a importância da correta definição das regras gramaticais para garantir a precisão na análise.
+
+
 
