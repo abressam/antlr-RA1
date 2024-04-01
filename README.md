@@ -197,7 +197,7 @@ When testing the concatenation of a larger expression, we can see that we succee
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/40f49701-c27f-4c92-8b08-4c2b179dedbf)
 
-📷 *Image 13. Expression ((((2 3 +)(4 1 -) /)(1 MEM) *)(2 7 |) +) working correctly.*
+📷 *Image 13. Expression ((((2 3 +)(4 1 -) /)(1 MEM) * )(2 7 |) +) working correctly.*
 
 Below we can see another part of the generated syntactic tree, with a warning, as we left some incorrect expressions in the test file:
 
