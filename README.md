@@ -40,3 +40,14 @@ The work was developed in antlr4 and compiled using the Java language. The gramm
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/841839ae-af1f-4bcc-9912-84bf6b1470f4)
 
 Figure 1. Grammar named "Arithmetic".
+
+The grammar was named "Arithmetic". Right at the beginning, we defined the rule "prog," which represents a valid program in the language and indicates the start of execution. This rule allows for one or more expressions (expr) followed by a newline (NEWLINE). The asterisk (*) indicates that zero or more occurrences can occur.
+
+### II. Rules and Expressions
+
+Below, we define the rule "expr," which represents an expression. From there, this rule describes all possible forms that an expression can take in the language, including memory references, operations, etc., as demonstrated in:
+
+* *'(' operation ')'*: when we have an operation between two numbers;
+* *'(' number number '+' ')'*: addition operation;
+*'(' number number '-' ')'*: subtraction operation;
+
