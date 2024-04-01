@@ -2,7 +2,7 @@
 
 [Portuguese version here](README_pt.md)
 
-<br> The following work was carried out by the students Aline Belomo de Mattos and Amanda Bressam Martins
+<br> The following work was carried out by the students Aline Belomo de Mattos and Amanda Bressam Martins.
 
 ## Introduction
 
@@ -47,7 +47,44 @@ The grammar was named "Arithmetic". Right at the beginning, we defined the rule 
 
 Below, we define the rule "expr," which represents an expression. From there, this rule describes all possible forms that an expression can take in the language, including memory references, operations, etc., as demonstrated in:
 
-* *'(' operation ')'*: when we have an operation between two numbers;
-* *'(' number number '+' ')'*: addition operation;
-*'(' number number '-' ')'*: subtraction operation;
+* **'(' operation ')'**: when we have an operation between two numbers;
+* **'(' number number '+' ')'**: addition operation;
+* **'(' number number '-' ')'**: subtraction operation;
+* **'(' number number '*' ')'**: multiplication operation;
+* **'(' integer nonZeroInt '|' ')'**, **'(' rational nonZeroFloat '|' ')'**, **'(' rational nonZeroInt '|' ')''**, and **'(' integer nonZeroFloat '|' ')'**: define rules for division operations between real numbers and prevent division by zero;
+* **'(' integer nonZeroInt '/' ')'** and **'(' nonZeroInt nonZeroInt '/' ')'**: define rules for integer division operations and prevent division by zero;
+* **'(' integer integer '%' ')'**and **'(' nonZeroInt nonZeroInt '%' ')'**: define rules for remainder operations of integer division and prevent division by zero;
+* **'(' number integer '^' ')'**: exponentiation operation that prevents negative exponent;
+* **'(' number MEM ')'**: when a number is "saved" in memory;
+* **'(' number MEM expr operator')'**: when a number is "saved" in memory and we have an expression and/or operator immediately following;
+* **'(' MEM ')'**: when a number is "retrieved" from memory storage;
+* **'(' expr MEM ')'**: when an expression is "saved/stored" in memory;
+* **'(' MEM expr ')'**: when an expression is alongside a "search" for the stored value in memory;
+* **'(' MEM expr operator')'**: when an expression and/or operation is alongside a "search" for the stored value in memory
+* **'(' integer RES ')'**: when we retrieve the integer value of the result from a line;
+* **'(' integer RES expr')'** and **'(' expr RES ')'**: when we retrieve the integer value of the result from a line, followed by an expression or with an expression preceding it;
+* **'(' expr RES expr')'**: when we retrieve the integer value of the result from a line and it can be preceded and/or followed by expressions;
+* **'(' number expr operator ')'**: we can have numbers followed by expressions and operators;
+* '**(' expr* ')'**: we can have zero or more expressions;
 
+For rules related to operations and numbers:
+
+1. **operation: expr expr operator**: this rule indicates that an operation consists of two expressions (expr) separated by an operator (operator).
+2. **operator: ('+' | '-' | '*' | '/' | '|' | '^' | '%')**: specifies the valid operators in the language (already explained above);
+3. **number: FLOAT | INT | NEGATIVE_INT | NEGATIVE_FLOAT | ZERO**: defines the "number" rule, which represents a number in the language. It can be an integer number (INT), a floating-point number (FLOAT), or a negative floating-point or integer number (NEGATIVE) or zero;
+4. **rational: FLOAT | ZERO**: defines what a "rational" number is, in this case, floating-point numbers or zero;
+5. **nonZeroFloat: FLOAT | NEGATIVE_FLOAT**: defines floating-point numbers that are not zero.
+6. **integer: INT | ZERO**: defines integer numbers and zero.
+7. **nonZeroInt: INT | NEGATIVE_INT**: defines integer numbers, positive and negative, that are not zero.
+
+And last but not least, the definitions of "types" and keywords:
+
+1. INT: [1-9] [0-9]*: specifies an integer number that starts with a digit between 1 and 9 ([1-9]) followed by zero or more digits ([0-9]*), matches any positive integer greater than zero.
+2. NEGATIVE_INT: '-' INT: defines a negative integer number
+3. ZERO: '0': defines the integer number zero.
+4. FLOAT: [0-9]+ '.' [0-9]+: specifies a floating-point number, consisting of one or more digits ([0-9]+) followed by a period ('.') and again one or more digits ([0-9]+). This matches any positive floating-point number.
+5. NEGATIVE: '-' (FLOAT | INT): specifies a negative number as a minus sign (-) followed by an integer number or a floating-point number.  
+6. MEM: 'MEM': specifies the keyword "MEM".
+7. RES: 'RES': specifies the keyword "RES".
+8. NEWLINE: [\r\n]+: specifies a newline as one or more occurrences of carriage return (\r) or newline (\n).
+9. WS: [ \t]+ -> skip: specifies whitespace (space or tab) as characters to be ignored during analysis. The -> skip indicates that these characters will be ignored by the lexer.
