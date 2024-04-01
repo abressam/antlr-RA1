@@ -93,8 +93,10 @@ And last but not least, the definitions of "types" and keywords:
 
 From the definition of the "Arithmetic" grammar, three test files were created containing a variety of expressions for evaluation and subsequent construction of their corresponding syntax trees.
 
-To execute the program and display the syntax tree in an interface, the execution of some commands is necessary. Below is an image showing the arrangement of directories in the GitHub repository of this work, containing the folders "lib," "bin," and "sample."
+To execute the program and display the syntax tree in an interface, the execution of some commands is necessary. Below is an image showing the arrangement of directories in the GitHub repository of this work, containing the folders "_lib_", "_bin_" and "_sample_".
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8b4cf304-34d7-40a7-a470-ad7a67bf4914)
 
 Figure 2. Directory layout of the GitHub repository
+
+To execute the commands, it's necessary to be within the "_sample_" directory.
