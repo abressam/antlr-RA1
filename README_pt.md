@@ -131,7 +131,7 @@ grun Arithmetic prog -gui data.txt
 
 O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições e operações com os mesmos números, ou números próximos (de ponto flutuante):
 
-![image](https://github.com/abressam/antlr-RA1/assets/77062126/e144bae2-92f7-40f8-9f94-8fbe2330a7b6)
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/6908cf8c-6d1c-42ac-b252-3010f5d967e3)
 
 📷 *Figura 5. conteúdo do primeiro arquivo de testes.*
 
@@ -168,7 +168,7 @@ Abaixo temos outra parte da árvore sintática do primeiro arquivo de teste, por
 
 O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições e a concatenação de expressões, além de expressões proibidas.
 
-![image](https://github.com/abressam/antlr-RA1/assets/77062126/cac3e67a-f708-4acc-b637-e8fe5e35ca99)
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/0f2b3751-07ef-4ebd-8751-f06dca17777b)
 
 📷 *Figura 10. Conteúdo do segundo arquivo de testes.*
 
