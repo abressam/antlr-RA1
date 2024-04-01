@@ -39,7 +39,7 @@ The work was developed in antlr4 and compiled using the Java language. The gramm
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/841839ae-af1f-4bcc-9912-84bf6b1470f4)
 
-Figure 1. Grammar named "Arithmetic".
+📷 Figure 1. Grammar named "Arithmetic".
 
 The grammar was named "Arithmetic". Right at the beginning, we defined the rule "prog," which represents a valid program in the language and indicates the start of execution. This rule allows for one or more expressions (expr) followed by a newline (NEWLINE). The asterisk (*) indicates that zero or more occurrences can occur.
 
@@ -97,19 +97,19 @@ To execute the program and display the syntax tree in an interface, the executio
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8b4cf304-34d7-40a7-a470-ad7a67bf4914)
 
-Figure 2. Directory layout of the GitHub repository
+📷 Figure 2. Directory layout of the GitHub repository
 
 To execute the commands, it's necessary to be within the "_sample_" directory.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/2d03ef2e-cd77-4e41-8c63-722d600b3b9d)
 
-Figure 3. Example of path to the folder containing the antlr and grammar file (sample).
+📷 Figure 3. Example of path to the folder containing the antlr and grammar file (sample).
 
 Inside the "_sample_" folder, you will find both the file of our grammar (Arithmetic.g4) and other files that are generated when using the Java compiler.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8cce7a79-2022-4bc4-84f9-439d8d9757ac)
 
-Figure 4. Contents of the "sample" directory.
+📷 Figure 4. Contents of the "sample" directory.
 
 From there, it is necessary to use the commands (also use whenever an update is made to the Arithmetic.g4 file):
 
