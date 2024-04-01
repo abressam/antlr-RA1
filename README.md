@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The work carried out below aimed to study the Antlr language and generate lexical and syntactic analyzers in order to analyze the language we previously used in another project titled "Calculator".
+The following work aimed to study the Antlr language and generate lexical and syntactic analyzers in order to analyze the language we used previously in another previous work, entitled "Calculator". Both works were developed for the Interpreter Construction discipline of the 5th period of the Bachelor's degree in Information Systems at the Pontifical Catholic University of Paraná (PUCPR).
 
 In the previous project, we used some rules to create expressions in the format of Reverse Polish Notation (RPN) and, from test files, perform calculations of the expressions. The calculator had test expressions that were calculated following the following format for operations:
 
