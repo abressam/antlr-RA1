@@ -39,7 +39,7 @@ O trabalho foi desenvolvido em antlr4 e compilado com a linguagem Java. A gramá
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/841839ae-af1f-4bcc-9912-84bf6b1470f4)
 
-Figura 1. Gramática denominada “Arithmetic”.
+📷 *Figura 1. Gramática denominada “Arithmetic”*.
 
 A gramática teve seu nome definido como “Arithmetic”. Logo no começo já definimos a regra “prog” que representa um programa válido na linguagem e indica que ali começa a execução. Esta regra permite que haja uma ou mais expressões (expr) seguidas por uma quebra de linha (NEWLINE). O asterisco (*) indica que zero ou mais ocorrências podem ocorrer.
 
@@ -88,3 +88,41 @@ E, por último, mas não menos importante, as definições de “tipos” e pala
 7. __RES: 'RES'__: especifica a palavra-chave "RES".
 8. __NEWLINE: [\r\n]+__: especifica uma quebra de linha como uma ou mais ocorrências de retorno (\r) ou nova linha (\n).
 9. __WS: [ \t]+ -> skip__: especifica espaços em branco (espaço ou tabulação) como caracteres a serem ignorados durante a análise. O -> skip indica que esses caracteres serão ignorados pelo analisador léxico.
+
+## Discussão e Resultados
+
+A partir da definição da gramática "Arithmetic", foram elaborados três arquivos de teste contendo uma variedade de expressões para avaliação e subsequente construção de suas árvores sintáticas correspondentes.
+
+Para executar o programa e fazer com que a árvore sintática apareça numa interface, a execução de alguns comandos é necessária. Abaixo se encontra uma imagem da disposição dos diretórios do repositório no GitHub desse trabalho, contendo as pastas “_lib_”, “_bin_” e “_sample_”. 
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/8b4cf304-34d7-40a7-a470-ad7a67bf4914)
+
+📷 *Figura 2. Disposição dos diretórios do repositório no GitHub*
+
+É necessário estar dentro da pasta “sample” para executar os comandos.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/2d03ef2e-cd77-4e41-8c63-722d600b3b9d)
+
+📷 Figura 3. Exemplo de path até a pasta onde está o antlr e o arquivo da gramática (sample).
+
+Dentro da pasta "_sample_" encontra-se tanto o arquivo da nossa gramática (Arithmetic.g4) quanto outros arquivos que são gerados ao usar o compilador do Java.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/8cce7a79-2022-4bc4-84f9-439d8d9757ac)
+
+📷 Figura 4. Conteúdo do diretório “sample”.
+
+A partir disso, é necessário utilizar os comandos (utilize também sempre que for feita uma atualização no arquivo Arithmetic.g4):
+
+```
+antlr4 Arithmetic.g4
+```
+
+```
+compile Arithmetic*.java
+```
+
+Por fim, informe no terminal o comando abaixo, seguido do nome do arquivo de teste (ex: data.txt) para mostrar o gráfico criado:
+
+```
+grun Arithmetic prog -gui data.txt
+```
