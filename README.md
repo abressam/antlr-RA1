@@ -53,7 +53,7 @@ Below, we define the rule "expr," which represents an expression. From there, th
 * **'(' number number '*' ')'**: multiplication operation;
 * **'(' integer nonZeroInt '|' ')'**, **'(' rational nonZeroFloat '|' ')'**, **'(' rational nonZeroInt '|' ')''**, and **'(' integer nonZeroFloat '|' ')'**: define rules for division operations between real numbers and prevent division by zero;
 * **'(' integer nonZeroInt '/' ')'** and **'(' nonZeroInt nonZeroInt '/' ')'**: define rules for integer division operations and prevent division by zero;
-* **'(' integer integer '%' ')'**and **'(' nonZeroInt nonZeroInt '%' ')'**: define rules for remainder operations of integer division and prevent division by zero;
+* **'(' integer integer '%' ')'** and **'(' nonZeroInt nonZeroInt '%' ')'**: define rules for remainder operations of integer division and prevent division by zero;
 * **'(' number integer '^' ')'**: exponentiation operation that prevents negative exponent;
 * **'(' number MEM ')'**: when a number is "saved" in memory;
 * **'(' number MEM expr operator')'**: when a number is "saved" in memory and we have an expression and/or operator immediately following;
