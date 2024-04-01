@@ -115,6 +115,9 @@ From there, it is necessary to use the commands (also use whenever an update is 
 
 ```
 antlr4 Arithmetic.g4
+```
+
+```
 compile Arithmetic*.java
 ```
 
