@@ -194,7 +194,7 @@ Ao testar a concatenação de uma expressão maior, podemos ver que obtemos suce
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/40f49701-c27f-4c92-8b08-4c2b179dedbf)
 
-📷 *Figura 13. Expressão ((((2 3 +)(4 1 -) /)(1 MEM) *)(2 7 |) +) funcionando corretamente.*
+📷 *Figura 13. Expressão ((((2 3 +)(4 1 -) /)(1 MEM) * )(2 7 |) +) funcionando corretamente.*
 
 Abaixo podemos ver outra parte da árvore sintática gerada, com um aviso, pois deixamos no arquivo de teste algumas expressões incorretas:
 
