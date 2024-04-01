@@ -30,3 +30,9 @@ In other words, they can be nested to create composite expressions, with no limi
 * (MEM): returns the value stored in memory. If the memory has not been used, it returns the real number zero.
 
 Unlike the previous work, where we were supposed to program a "functional" calculator, i.e., one that displayed the results of the operations, here it was not necessary to present the results related to the operations of the test files, only the syntactic trees.
+
+## Development
+
+### I. The Grammar
+
+The work was developed in antlr4 and compiled using the Java language. The grammar was defined as follows:
