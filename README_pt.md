@@ -103,13 +103,13 @@ Para executar o programa e fazer com que a árvore sintática apareça numa inte
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/2d03ef2e-cd77-4e41-8c63-722d600b3b9d)
 
-📷 Figura 3. Exemplo de path até a pasta onde está o antlr e o arquivo da gramática (sample).
+📷 *Figura 3. Exemplo de path até a pasta onde está o antlr e o arquivo da gramática (sample)*.
 
 Dentro da pasta "_sample_" encontra-se tanto o arquivo da nossa gramática (Arithmetic.g4) quanto outros arquivos que são gerados ao usar o compilador do Java.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8cce7a79-2022-4bc4-84f9-439d8d9757ac)
 
-📷 Figura 4. Conteúdo do diretório “sample”.
+📷 *Figura 4. Conteúdo do diretório “sample”*.
 
 A partir disso, é necessário utilizar os comandos (utilize também sempre que for feita uma atualização no arquivo Arithmetic.g4):
 
