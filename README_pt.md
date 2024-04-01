@@ -126,6 +126,7 @@ Por fim, informe no terminal o comando abaixo, seguido do nome do arquivo de tes
 ```
 grun Arithmetic prog -gui data.txt
 ```
+
 ###  I. Arquivo 1: data.txt
 
 O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições e operações com os mesmos números, ou números próximos (de ponto flutuante):
@@ -148,5 +149,99 @@ Os avisos que encontramos são devido a tentativas de operações que são trata
 Abaixo podemos a árvore sintática gerada:
 
 ![data](https://github.com/abressam/antlr-RA1/assets/77062126/18bbf36a-a05d-438a-98eb-e1440d86706c)
+
+📷 *Figura 7. Árvore sintática do arquivo data.txt.*
+
+Levando em consideração que a árvore ficou muito comprida e difícil de ler, separamos em duas partes para melhor entendimento:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/fe427e2e-d19f-4511-a9a0-dd8c85e8b1ec)
+
+📷 *Figura 8. Árvore sintática do arquivo data.txt sem avisos.*
+
+Abaixo temos outra parte da árvore sintática do primeiro arquivo de teste, porém, podemos ver que os avisos explicados anteriormente aparecem na árvore destacados em rosa.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/33d45cef-a2e8-45d1-9af3-d51a9fe0f245)
+
+📷 *Figura 9. Árvore sintática com avisos.*
+
+###  II. Arquivo 2: data2.txt
+
+O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições e a concatenação de expressões, além de expressões proibidas.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/cac3e67a-f708-4acc-b637-e8fe5e35ca99)
+
+📷 *Figura 10. Conteúdo do segundo arquivo de testes.*
+
+A árvore sintática gerada:
+
+![data2](https://github.com/abressam/antlr-RA1/assets/77062126/d50bcdc5-3ea6-49e9-a1a2-3135c13b95c3)
+
+📷 *Figura 11. Árvore sintática do arquivo data2.txt.*
+
+E parte da árvore sintática gerada, sem nenhum aviso ou erro:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/f591d39a-5ea5-47ee-9fd0-25dc2f58a9dd)
+
+📷 *Figura 12. Árvore sintática do arquivo data2.txt sem avisos.*
+
+Perceba que a primeira expressão do arquivo é “(2. 1 +)”, porém o 2 com o ponto logo após, que indicaria um número flutuante não finalizado, é tratado pela gramática e impresso na árvore como um número inteiro.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/618ae05b-cf4d-4ed1-9bd1-3116983128b3)
+
+📷 *Figura 12. Tratamento do erro de entrada.*
+
+Ao testar a concatenação de uma expressão maior, podemos ver que obtemos sucesso e ela é impressa corretamente na árvore:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/40f49701-c27f-4c92-8b08-4c2b179dedbf)
+
+📷 *Figura 13. Expressão ((((2 3 +)(4 1 -) /)(1 MEM) *)(2 7 |) +) funcionando corretamente.*
+
+Abaixo podemos ver outra parte da árvore sintática gerada, com um aviso, pois deixamos no arquivo de teste algumas expressões incorretas:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/a74ecb90-6315-4b4a-aa41-bc8cbd51c847)
+
+📷 *Figura 14. Aviso no terminal do segundo arquivo de teste.*
+
+1. (2 0 /): não é possível fazer a divisão por zero e, por ser uma entrada incorreta, gera um aviso;
+2. (2 (2 2 -) /): perceba que a expressão destacada em laranja “(2 (2 2 -) /)” resultaria em zero, porém, como estamos lidando com uma gramática, não acusa erro.
+3. (% (1 2 -) ^): essa expressão está incorreta, pois conta com dois operadores a mais e que não correspondem a nenhuma operação (% e ^ não têm números resultantes o suficiente para serem “calculados”).
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/c8b0844e-9c56-44f5-8d9a-a4329a20cfc8)
+
+📷 *Figura 15. Árvore sintática com avisos do arquivo data2.txt.*
+
+## O modo pânico
+
+A árvore sintática termina de ser impressa aí, pois a próxima expressão do arquivo de teste é “_/(4 (7 2 -) ^)_” e esse padrão não é reconhecido pela gramática (é obrigatório que expressões, operadores e etc estejam envoltos por parênteses) por estar incorreta. Isso acarreta em erro.
+
+Este erro faz com que entre o "modo de pânico", que nada mais é que uma técnica usada em analisadores sintáticos para lidar com erros de sintaxe em um código fonte. Quando o analisador encontra um erro de sintaxe, em vez de simplesmente parar a análise, ele tenta recuperar o máximo possível para continuar a análise e identificar mais erros e lidar com a situação de erro da melhor maneira possível, mesmo que o código fonte possa estar em um estado incoerente, quando não consegue, para a execução.
+
+### III. Arquivo 3: data3.txt
+
+O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições, operações, concatenações e avisos:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/c9a23345-b666-4951-b871-441eca031b82)
+
+📷 *Figura 16. Conteúdo do terceiro arquivo de testes.*
+
+A árvore sintática gerada:
+
+![data3](https://github.com/abressam/antlr-RA1/assets/77062126/5c99e547-f2a3-4cd7-a4fc-04a547042e0a)
+
+📷 *Figura 17. Árvore sintática do terceiro arquivo de testes.*
+
+Abaixo podemos ver outra parte da árvore sintática gerada, com um aviso, pois deixamos no arquivo de teste algumas expressões incorretas:
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/e0548578-8c61-4be6-94b6-256da56d2f0d)
+
+📷 *Figura 18. Aviso da expressão incorreta.*
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/4abb5d10-19aa-4e96-9177-0bf6687a04d1)
+
+📷 *Figura 19. Impressão na árvore da expressão incorreta.*
+
+Perceba aqui que, mesmo que tenhamos 6 linhas quando “chamamos” a expressão “(6 MEM)”, não faria diferença o número que colocássemos, pois por enquanto, a gramática apenas avalia se essa expressão é aceita e não possui lógica ainda.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/407c135f-a377-4531-baf0-4fc10b6e850c)
 
 
