@@ -96,4 +96,5 @@ From the definition of the "Arithmetic" grammar, three test files were created c
 To execute the program and display the syntax tree in an interface, the execution of some commands is necessary. Below is an image showing the arrangement of directories in the GitHub repository of this work, containing the folders "lib," "bin," and "sample."
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8b4cf304-34d7-40a7-a470-ad7a67bf4914)
+
 Figure 2. Directory layout of the GitHub repository
