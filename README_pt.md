@@ -126,3 +126,25 @@ Por fim, informe no terminal o comando abaixo, seguido do nome do arquivo de tes
 ```
 grun Arithmetic prog -gui data.txt
 ```
+###  I. Arquivo 1: data.txt
+
+O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições e operações com os mesmos números, ou números próximos (de ponto flutuante):
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/e144bae2-92f7-40f8-9f94-8fbe2330a7b6)
+
+📷 *Figura 5. conteúdo do primeiro arquivo de testes.*
+
+Ao executar os comandos, geramos a árvore sintática deste arquivo de testes. Mas antes, recebemos avisos (warnings) que aconteceram ao gerar a árvore. No caso abaixo, estamos fazendo operações que não atendem às regras especificadas na gramática, isso não chega a “quebrar” o programa, mas não é aceito.
+
+![data](https://github.com/abressam/antlr-RA1/assets/77062126/18bbf36a-a05d-438a-98eb-e1440d86706c)
+
+📷 *Figura 6. Avisos do primeiro arquivo de teste.*
+
+Os avisos que encontramos são devido a tentativas de operações que são tratadas como incorretas, por exemplo:
+
+* (3.1 2 /): como temos um número de ponto flutuante (3.1) fazendo uma divisão de números inteiros, não podemos aceitar, pois não corresponde a nenhuma regra;
+* (3 2.4 ^) e (3 -2 ^): o mesmo se aplica para potenciação, que no caso da nossa gramática só considera correta a potenciação de números inteiros positivos, sendo 3.2 e -2 números não aceitos.
+
+Abaixo podemos a árvore sintática gerada:
+
+
