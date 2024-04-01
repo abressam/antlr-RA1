@@ -88,3 +88,13 @@ And last but not least, the definitions of "types" and keywords:
 7. __RES: 'RES'__: specifies the keyword "RES".
 8. __NEWLINE: [\r\n]+__: specifies a newline as one or more occurrences of carriage return (\r) or newline (\n).
 9. __WS: [ \t]+ -> skip__: specifies whitespace (space or tab) as characters to be ignored during analysis. The -> skip indicates that these characters will be ignored by the lexer.
+
+## Discussion and Results
+
+From the definition of the "Arithmetic" grammar, three test files were created containing a variety of expressions for evaluation and subsequent construction of their corresponding syntax trees.
+
+To execute the program and display the syntax tree in an interface, the execution of some commands is necessary. Below is an image showing the arrangement of directories in the GitHub repository of this work, containing the folders "lib," "bin," and "sample."
+
+![alt text](image-2.png)
+
+Figure 2. Directory layout of the GitHub repository
