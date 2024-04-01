@@ -79,7 +79,7 @@ For rules related to operations and numbers:
 
 And last but not least, the definitions of "types" and keywords:
 
-1. INT: [1-9] [0-9]*: specifies an integer number that starts with a digit between 1 and 9 ([1-9]) followed by zero or more digits ([0-9]*), matches any positive integer greater than zero.
+1. INT: [1-9] [0-9]* : specifies an integer number that starts with a digit between 1 and 9 ([1-9]) followed by zero or more digits ([0-9]*), matches any positive integer greater than zero.
 2. NEGATIVE_INT: '-' INT: defines a negative integer number
 3. ZERO: '0': defines the integer number zero.
 4. FLOAT: [0-9]+ '.' [0-9]+: specifies a floating-point number, consisting of one or more digits ([0-9]+) followed by a period ('.') and again one or more digits ([0-9]+). This matches any positive floating-point number.
