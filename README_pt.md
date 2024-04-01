@@ -240,8 +240,9 @@ Abaixo podemos ver outra parte da árvore sintática gerada, com um aviso, pois 
 
 📷 *Figura 19. Impressão na árvore da expressão incorreta.*
 
-Perceba aqui que, mesmo que tenhamos 6 linhas quando “chamamos” a expressão “(6 MEM)”, não faria diferença o número que colocássemos, pois por enquanto, a gramática apenas avalia se essa expressão é aceita e não possui lógica ainda.
+Perceba aqui que, mesmo que tenhamos 6 linhas quando “chamamos” a expressão “(6 RES)”, não faria diferença o número que colocássemos, pois por enquanto, a gramática apenas avalia se essa expressão é aceita e não possui lógica ainda.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/407c135f-a377-4531-baf0-4fc10b6e850c)
 
+📷 *Figura 20. Impressão da expressão “(6 RES)” na árvore sintática.*
 
