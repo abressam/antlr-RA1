@@ -80,11 +80,11 @@ For rules related to operations and numbers:
 And last but not least, the definitions of "types" and keywords:
 
 1. __INT: [1-9] [0-9]*__ : specifies an integer number that starts with a digit between 1 and 9 ([1-9]) followed by zero or more digits ([0-9]*), matches any positive integer greater than zero.
-2. NEGATIVE_INT: '-' INT: defines a negative integer number
-3. ZERO: '0': defines the integer number zero.
-4. FLOAT: [0-9]+ '.' [0-9]+: specifies a floating-point number, consisting of one or more digits ([0-9]+) followed by a period ('.') and again one or more digits ([0-9]+). This matches any positive floating-point number.
-5. NEGATIVE: '-' (FLOAT | INT): specifies a negative number as a minus sign (-) followed by an integer number or a floating-point number.  
-6. MEM: 'MEM': specifies the keyword "MEM".
-7. RES: 'RES': specifies the keyword "RES".
-8. NEWLINE: [\r\n]+: specifies a newline as one or more occurrences of carriage return (\r) or newline (\n).
-9. WS: [ \t]+ -> skip: specifies whitespace (space or tab) as characters to be ignored during analysis. The -> skip indicates that these characters will be ignored by the lexer.
+2. __NEGATIVE_INT: '-' INT__: defines a negative integer number
+3. __ZERO: '0'__: defines the integer number zero.
+4. __FLOAT: [0-9]+ '.' [0-9]+__: specifies a floating-point number, consisting of one or more digits ([0-9]+) followed by a period ('.') and again one or more digits ([0-9]+). This matches any positive floating-point number.
+5. __NEGATIVE: '-' (FLOAT | INT)__: specifies a negative number as a minus sign (-) followed by an integer number or a floating-point number.  
+6. __MEM: 'MEM'__: specifies the keyword "MEM".
+7. __RES: 'RES'__: specifies the keyword "RES".
+8. __NEWLINE: [\r\n]+__: specifies a newline as one or more occurrences of carriage return (\r) or newline (\n).
+9. __WS: [ \t]+ -> skip__: specifies whitespace (space or tab) as characters to be ignored during analysis. The -> skip indicates that these characters will be ignored by the lexer.

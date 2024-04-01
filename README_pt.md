@@ -69,22 +69,22 @@ A seguir, definimos a regra “expr”, que representa uma expressão, a partir 
 
 Já para as regras relacionadas a operações e números:
 
-1. operation: expr expr operator: esta regra indica que uma operação é composta por duas expressões (expr) separadas por um operador (operator).
-2. operator: ('+' | '-' | '*' | '/' | '|' | '^' | '%'):  especifica os operadores válidos na linguagem (já explicados anteriormente);
-3. number: FLOAT | INT | NEGATIVE_INT | NEGATIVE_FLOAT | ZERO: define a regra “number”, que representa um número na linguagem. Pode ser um número inteiro (INT), um número de ponto flutuante (FLOAT), ou um número negativo de ponto flutuante ou inteiro (NEGATIVE) ou zero;
-4. rational: FLOAT | ZERO: define o que é um número “racional”, nesse caso os números de ponto flutuante ou zero;
-5. nonZeroFloat: FLOAT | NEGATIVE_FLOAT: define os números de ponto flutuante que não são zero.
-6. integer: INT | ZERO: define os números inteiros e zero.
-7. nonZeroInt: INT | NEGATIVE_INT: define os números inteiros, positivos e negativos, que não são zero.
+1. __operation: expr expr operator__: esta regra indica que uma operação é composta por duas expressões (expr) separadas por um operador (operator).
+2. __operator: ('+' | '-' | '*' | '/' | '|' | '^' | '%')__:  especifica os operadores válidos na linguagem (já explicados anteriormente);
+3. __number: FLOAT | INT | NEGATIVE_INT | NEGATIVE_FLOAT | ZERO__: define a regra “number”, que representa um número na linguagem. Pode ser um número inteiro (INT), um número de ponto flutuante (FLOAT), ou um número negativo de ponto flutuante ou inteiro (NEGATIVE) ou zero;
+4. __rational: FLOAT | ZERO__: define o que é um número “racional”, nesse caso os números de ponto flutuante ou zero;
+5. __nonZeroFloat: FLOAT | NEGATIVE_FLOAT__: define os números de ponto flutuante que não são zero.
+6. __integer: INT | ZERO__: define os números inteiros e zero.
+7. __nonZeroInt: INT | NEGATIVE_INT__: define os números inteiros, positivos e negativos, que não são zero.
 
 E, por último, mas não menos importante, as definições de “tipos” e palavras-chave:
 
-1. INT: [1-9] [0-9]*: especifica um número inteiro que começa com um dígito entre 1 e 9 ([1-9]) seguido de zero ou mais dígitos ([0-9]*), corresponde a qualquer número inteiro positivo maior que zero.
-2. NEGATIVE_INT: '-' INT: define um número inteiro negativo
-3. ZERO: '0': define o número inteiro zero.
-4. FLOAT: [0-9]+ '.' [0-9]+: especifica um número de ponto flutuante, que consiste em um ou mais dígitos ([0-9]+) seguidos por um ponto ('.') e novamente um ou mais dígitos ([0-9]+). Isso corresponde a qualquer número de ponto flutuante positivo.
-5. NEGATIVE: '-' (FLOAT | INT): especifica um número negativo como um sinal de menos (-) seguido de um número inteiro ou um número de ponto flutuante.  
-6. MEM: 'MEM': especifica a palavra-chave "MEM".
-7. RES: 'RES': especifica a palavra-chave "RES".
-8. NEWLINE: [\r\n]+: especifica uma quebra de linha como uma ou mais ocorrências de retorno (\r) ou nova linha (\n).
-9. WS: [ \t]+ -> skip: especifica espaços em branco (espaço ou tabulação) como caracteres a serem ignorados durante a análise. O -> skip indica que esses caracteres serão ignorados pelo analisador léxico.
+1. __INT: [1-9] [0-9]*__: especifica um número inteiro que começa com um dígito entre 1 e 9 ([1-9]) seguido de zero ou mais dígitos ([0-9]*), corresponde a qualquer número inteiro positivo maior que zero.
+2. __NEGATIVE_INT: '-' INT__: define um número inteiro negativo
+3. __ZERO: '0'__: define o número inteiro zero.
+4. __FLOAT: [0-9]+ '.' [0-9]+__: especifica um número de ponto flutuante, que consiste em um ou mais dígitos ([0-9]+) seguidos por um ponto ('.') e novamente um ou mais dígitos ([0-9]+). Isso corresponde a qualquer número de ponto flutuante positivo.
+5. __NEGATIVE: '-' (FLOAT | INT)__: especifica um número negativo como um sinal de menos (-) seguido de um número inteiro ou um número de ponto flutuante.  
+6. __MEM: 'MEM'__: especifica a palavra-chave "MEM".
+7. __RES: 'RES'__: especifica a palavra-chave "RES".
+8. __NEWLINE: [\r\n]+__: especifica uma quebra de linha como uma ou mais ocorrências de retorno (\r) ou nova linha (\n).
+9. __WS: [ \t]+ -> skip__: especifica espaços em branco (espaço ou tabulação) como caracteres a serem ignorados durante a análise. O -> skip indica que esses caracteres serão ignorados pelo analisador léxico.
