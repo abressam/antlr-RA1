@@ -103,6 +103,8 @@ To execute the commands, it's necessary to be within the "_sample_" directory.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/2d03ef2e-cd77-4e41-8c63-722d600b3b9d)
 
+Figure 3. Example of path to the folder containing the antlr and grammar file (sample).
+
 Inside the "_sample_" folder, you will find both the file of our grammar (Arithmetic.g4) and other files that are generated when using the Java compiler.
 
 ![image](https://github.com/abressam/antlr-RA1/assets/77062126/8cce7a79-2022-4bc4-84f9-439d8d9757ac)
