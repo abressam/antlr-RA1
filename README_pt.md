@@ -136,7 +136,7 @@ O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar dif
 
 Ao executar os comandos, geramos a árvore sintática deste arquivo de testes. Mas antes, recebemos avisos (warnings) que aconteceram ao gerar a árvore. No caso abaixo, estamos fazendo operações que não atendem às regras especificadas na gramática, isso não chega a “quebrar” o programa, mas não é aceito.
 
-![data](https://github.com/abressam/antlr-RA1/assets/77062126/18bbf36a-a05d-438a-98eb-e1440d86706c)
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/1cd95cb7-3aeb-4d74-b05a-b9a03fcea2bd)
 
 📷 *Figura 6. Avisos do primeiro arquivo de teste.*
 
@@ -146,5 +146,7 @@ Os avisos que encontramos são devido a tentativas de operações que são trata
 * (3 2.4 ^) e (3 -2 ^): o mesmo se aplica para potenciação, que no caso da nossa gramática só considera correta a potenciação de números inteiros positivos, sendo 3.2 e -2 números não aceitos.
 
 Abaixo podemos a árvore sintática gerada:
+
+![data](https://github.com/abressam/antlr-RA1/assets/77062126/18bbf36a-a05d-438a-98eb-e1440d86706c)
 
 
