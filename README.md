@@ -100,3 +100,26 @@ To execute the program and display the syntax tree in an interface, the executio
 Figure 2. Directory layout of the GitHub repository
 
 To execute the commands, it's necessary to be within the "_sample_" directory.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/2d03ef2e-cd77-4e41-8c63-722d600b3b9d)
+
+Inside the "_sample_" folder, you will find both the file of our grammar (Arithmetic.g4) and other files that are generated when using the Java compiler.
+
+![image](https://github.com/abressam/antlr-RA1/assets/77062126/8cce7a79-2022-4bc4-84f9-439d8d9757ac)
+
+Figure 4. Contents of the "sample" directory.
+
+From there, it is necessary to use the commands (also use whenever an update is made to the Arithmetic.g4 file):
+
+```
+antlr4 Arithmetic.g4
+compile Arithmetic*.java
+```
+
+Finally, enter the following command in the terminal, followed by the name of the test file (e.g., data.txt) to display the created graph:
+
+```
+grun Arithmetic prog -gui data.txt
+```
+
+This process will enable the visualization of the syntax tree for the provided test file.
