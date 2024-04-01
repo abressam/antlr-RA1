@@ -1,6 +1,4 @@
-// Arithmetic.g4
-
-//Students: Aline Mattos & Amanda Bressam
+//Students: Aline Belomo Mattos & Amanda Bressam Martins
 
 // Grammar for arithmetic expressions
 
