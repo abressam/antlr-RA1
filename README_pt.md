@@ -216,6 +216,8 @@ A árvore sintática termina de ser impressa aí, pois a próxima expressão do 
 
 Este erro faz com que entre o "modo de pânico", que nada mais é que uma técnica usada em analisadores sintáticos para lidar com erros de sintaxe em um código fonte. Quando o analisador encontra um erro de sintaxe, em vez de simplesmente parar a análise, ele tenta recuperar o máximo possível para continuar a análise e identificar mais erros e lidar com a situação de erro da melhor maneira possível, mesmo que o código fonte possa estar em um estado incoerente, quando não consegue, para a execução.
 
+---
+
 ### III. Arquivo 3: data3.txt
 
 O conteúdo do arquivo foi escrito como especificado abaixo, a fim de testar diferentes composições, operações, concatenações e avisos:
